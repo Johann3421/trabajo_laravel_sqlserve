@@ -60,7 +60,7 @@ return [
     |
     */
 
-    'layout_topnav' => true,
+    'layout_topnav' => false,
     'layout_boxed' => null,
     'layout_fixed_sidebar' => null,
     'layout_light_sidebar' => null,
@@ -153,6 +153,21 @@ return [
             'text' => 'Products',
             'icon' => 'ti ti-shopping-cart',
             'url' => '/products'
+        ],
+        [
+            'text' => 'Nosotros',
+            'icon' => 'ti ti-shopping-bag',
+            'url' => '/nosotros'
+        ],
+        [
+            'text' => 'Ventas',
+            'icon' => 'ti ti-shopping-bag',
+            'url' => '/venta'
+        ],
+        [
+            'text' => 'Blog',
+            'icon' => 'ti ti-briefcase-filled',
+            'url' => '#'
         ],
         [
             'text' => 'Support',
