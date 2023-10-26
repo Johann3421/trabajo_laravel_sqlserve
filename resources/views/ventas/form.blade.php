@@ -18,14 +18,14 @@
     </div>
 </div>
 <div class="form-group mb-3">
-    <label class="form-label">   {{ Form::label('fecha_venta') }}</label>
+    <label class="form-label">{{ Form::label('fecha_venta', 'Fecha y Hora de Venta') }}</label>
     <div>
-        {{ Form::text('fecha_venta', $venta->fecha_venta, ['class' => 'form-control' .
-        ($errors->has('fecha_venta') ? ' is-invalid' : ''), 'placeholder' => 'Fecha Venta']) }}
+        {{ Form::datetimeLocal('fecha_venta', \Carbon\Carbon::now()->format('Y-m-d\TH:i'), ['class' => 'form-control' . ($errors->has('fecha_venta') ? ' is-invalid' : '')]) }}
         {!! $errors->first('fecha_venta', '<div class="invalid-feedback">:message</div>') !!}
-        <small class="form-hint">venta <b>fecha_venta</b> instruction.</small>
+        <small class="form-hint">Venta <b>fecha_venta</b> instruction.</small>
     </div>
 </div>
+
 <div class="form-group mb-3">
     <label class="form-label">   {{ Form::label('precio_unitario') }}</label>
     <div>
