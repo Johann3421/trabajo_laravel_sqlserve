@@ -63,7 +63,7 @@ class VentaController extends Controller
     {
         $venta = Venta::find($id);
 
-        return view('venta.show', compact('venta'));
+        return view('ventas.show', compact('venta'));
     }
 
     /**
