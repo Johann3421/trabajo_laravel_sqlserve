@@ -29,3 +29,6 @@ Route::resource('/products', App\Http\Controllers\ProductController::class);
 
 Route::resource('/nosotros', App\Http\Controllers\NosotrosController::class);
 Route::resource('/venta', App\Http\Controllers\VentaController::class);
+Route::get('/tienda', function () {
+    return view('tienda.index');
+})->name('tienda');

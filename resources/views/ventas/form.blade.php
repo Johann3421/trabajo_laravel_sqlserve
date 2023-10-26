@@ -1,10 +1,10 @@
-
 <div class="form-group mb-3">
-    <label class="form-label">{{ Form::label('product_id') }}</label>
+    <label class="form-label">   {{ Form::label('producto_id') }}</label>
     <div>
-        {{ Form::select('product_id', $productos->pluck('description', 'id'), $venta->product_id, ['class' => 'form-control' . ($errors->has('product_id') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione un Producto']) }}
-        {!! $errors->first('product_id', '<div class="invalid-feedback">:message</div>') !!}
-        <small class="form-hint">Venta <b>product_id</b> instruction.</small>
+        {{ Form::text('producto_id', $venta->producto_id, ['class' => 'form-control' .
+        ($errors->has('producto_id') ? ' is-invalid' : ''), 'placeholder' => 'Producto Id']) }}
+        {!! $errors->first('producto_id', '<div class="invalid-feedback">:message</div>') !!}
+        <small class="form-hint">venta <b>producto_id</b> instruction.</small>
     </div>
 </div>
 

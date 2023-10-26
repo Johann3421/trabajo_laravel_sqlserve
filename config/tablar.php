@@ -165,9 +165,9 @@ return [
             'url' => '/venta'
         ],
         [
-            'text' => 'Blog',
+            'text' => 'Tienda',
             'icon' => 'ti ti-briefcase-filled',
-            'url' => '#'
+            'url' => 'http://127.0.0.1:8000/tienda/index.html'
         ],
         [
             'text' => 'Support',

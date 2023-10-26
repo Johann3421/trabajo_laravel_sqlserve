@@ -34,7 +34,7 @@ class VentaController extends Controller
     {
         $venta = new Venta();
         $productos = Product::pluck('description', 'id');
-return view('ventas.create', compact('productos', 'venta'));
+        return view('ventas.create', compact('productos', 'venta'));
     }
 
     /**
