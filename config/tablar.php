@@ -147,7 +147,7 @@ return [
         [
             'text' => 'Home',
             'icon' => 'ti ti-home',
-            'url' => '/home'
+            'url' => 'http://127.0.0.1:8000/tienda/index.html'
         ],
         [
             'text' => 'Products',
