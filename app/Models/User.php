@@ -42,4 +42,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    public function ventas()
+{
+    return $this->belongsToMany(Venta::class, 'usp', 'user_id', 'venta_id');
+}
+
+public function products()
+{
+    return $this->belongsToMany(Product::class, 'usp', 'user_id', 'product_id');
+}
+
 }

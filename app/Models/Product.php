@@ -34,6 +34,16 @@ class Product extends Model
      * @var array
      */
     protected $fillable = ['description','stock','price'];
+    public function users()
+{
+    return $this->belongsToMany(User::class, 'usp', 'product_id', 'user_id');
+}
+
+public function ventas()
+{
+    return $this->belongsToMany(Venta::class, 'usp', 'product_id', 'venta_id');
+}
+
 
 
 

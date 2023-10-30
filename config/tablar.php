@@ -147,7 +147,12 @@ return [
         [
             'text' => 'Home',
             'icon' => 'ti ti-home',
-            'url' => 'http://127.0.0.1:8000/tienda/index.html'
+            'url' => '/home'
+        ],
+        [
+            'text' => 'Usuarios',
+            'icon' => 'ti ti-user-hexagon',
+            'url' => '/usp'
         ],
         [
             'text' => 'Products',

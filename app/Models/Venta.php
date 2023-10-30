@@ -46,6 +46,16 @@ class Venta extends Model
     {
         return $this->belongsTo(Producto::class);
     }
+    public function users()
+{
+    return $this->belongsToMany(User::class, 'usp', 'venta_id', 'user_id');
+}
+
+public function products()
+{
+    return $this->belongsToMany(Product::class, 'usp', 'venta_id', 'product_id');
+}
+
     
 
 }
