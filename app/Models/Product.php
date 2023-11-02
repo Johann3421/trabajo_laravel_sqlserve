@@ -20,11 +20,12 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     
-    static $rules = [
-		'description' => 'required',
-		'stock' => 'required',
-		'price' => 'required',
-    ];
+  public static $rules = [
+    'name' => 'required', // Agregamos la regla para el nombre
+    'description' => 'required',
+    'stock' => 'required',
+    'price' => 'required',
+];
 
     protected $perPage = 20;
 
@@ -33,7 +34,15 @@ class Product extends Model
      *
      * @var array
      */
-    protected $fillable = ['description','stock','price'];
+    protected $fillable = [
+      'name',
+      'description',
+      'stock',
+      'price',
+      'category',
+      'provider',
+      'image_path',
+  ];
 
 
 

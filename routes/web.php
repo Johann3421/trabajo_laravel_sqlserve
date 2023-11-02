@@ -32,3 +32,5 @@ Route::resource('/venta', App\Http\Controllers\VentaController::class);
 Route::get('/tienda', function () {
     return view('tienda.index');
 })->name('tienda');
+
+

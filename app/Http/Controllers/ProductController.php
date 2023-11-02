@@ -42,14 +42,40 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        request()->validate(Product::$rules);
+{
+    // Validar los campos del formulario
+    $request->validate([
+        'name' => 'required',
+        'description' => 'required',
+        'stock' => 'required',
+        'price' => 'required',
+        'category' => 'required',
+        'provider' => 'required',
+        'image_path' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Validar que sea una imagen
+    ]);
 
-        $product = Product::create($request->all());
-
-        return redirect()->route('products.index')
-            ->with('success', 'Product created successfully.');
+    // Verificar si se cargó una imagen
+    if ($request->hasFile('image_path')) {
+        // Guardar la imagen y obtener la ruta
+        $imagePath = $request->file('image_path')->store('public/images');
+    } else {
+        $imagePath = null; // Si no se cargó una imagen, asignar null o cualquier valor predeterminado que desees
     }
+
+    // Crear el producto con la ruta de la imagen
+    $product = Product::create([
+        'name' => $request->name,
+        'description' => $request->description,
+        'stock' => $request->stock,
+        'price' => $request->price,
+        'category' => $request->category,
+        'provider' => $request->provider,
+        'image_path' => $imagePath, // Asignar la ruta de la imagen
+    ]);
+
+    return redirect()->route('products.index')->with('success', 'Product created successfully.');
+}
+
 
     /**
      * Display the specified resource.

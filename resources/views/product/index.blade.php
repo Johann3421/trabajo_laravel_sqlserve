@@ -84,11 +84,15 @@
                                             <polyline points="6 15 12 9 18 15"/>
                                         </svg>
                                     </th>
-                                    
-										<th>Description</th>
-										<th>Stock</th>
-										<th>Price</th>
 
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Stock</th>
+                                    <th>Price</th>
+                                    <th>Category</th>
+                                    <th>Provider</th>
+                                    <th>Created At</th>
+                                    <th>Updated At</th>
                                     <th class="w-1"></th>
                                 </tr>
                                 </thead>
@@ -99,10 +103,15 @@
                                         <td><input class="form-check-input m-0 align-middle" type="checkbox"
                                                    aria-label="Select product"></td>
                                         <td>{{ ++$i }}</td>
-                                        
-											<td>{{ $product->description }}</td>
-											<td>{{ $product->stock }}</td>
-											<td>{{ $product->price }}</td>
+
+                                        <td>{{ $product->name }}</td>
+                                        <td>{{ $product->description }}</td>
+                                        <td>{{ $product->stock }}</td>
+                                        <td>{{ $product->price }}</td>
+                                        <td>{{ $product->category }}</td>
+                                        <td>{{ $product->provider }}</td>
+                                        <td>{{ $product->created_at }}</td>
+                                        <td>{{ $product->updated_at }}</td>
 
                                         <td>
                                             <div class="btn-list flex-nowrap">
@@ -144,7 +153,7 @@
 
                             </table>
                         </div>
-                       <div class="card-footer d-flex align-items-center">
+                        <div class="card-footer d-flex align-items-center">
                             {!! $products->links('tablar::pagination') !!}
                         </div>
                     </div>

@@ -67,6 +67,18 @@
                     </div>
                 </div>
                 <div class="mb-3">
+    <label class="form-label">Role</label>
+    <select name="role" class="form-control @error('role') is-invalid @enderror">
+        <option value="administrador">Administrador</option>
+        <option value="vendedor">Vendedor</option>
+        <option value="usuario">Usuario</option>
+    </select>
+    @error('role')
+        <div class="invalid-feedback">{{ $message }}</div>
+    @enderror
+</div>
+
+                <div class="mb-3">
                     <label class="form-check">
                         <input type="checkbox" class="form-check-input"/>
                         <span class="form-check-label">Agree the <a href="#" tabindex="-1">terms and policy</a>.</span>

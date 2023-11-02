@@ -147,27 +147,36 @@ return [
         [
             'text' => 'Home',
             'icon' => 'ti ti-home',
-            'url' => 'http://127.0.0.1:8000/tienda/index.html'
+            'url' => 'http://127.0.0.1:8000/tienda/index.html',
+            
+            
         ],
         [
             'text' => 'Products',
             'icon' => 'ti ti-shopping-cart',
-            'url' => '/products'
+            'url' => '/products',
+            
+            
         ],
         [
             'text' => 'Nosotros',
             'icon' => 'ti ti-shopping-bag',
-            'url' => '/nosotros'
+            'url' => '/nosotros',
+            
+            
         ],
         [
             'text' => 'Ventas',
             'icon' => 'ti ti-shopping-bag',
-            'url' => '/venta'
+            'url' => '/venta',
+            
+            
         ],
         [
             'text' => 'Tienda',
             'icon' => 'ti ti-briefcase-filled',
-            'url' => 'http://127.0.0.1:8000/tienda/index.html'
+            'url' => 'http://127.0.0.1:8000/tienda/index.html',
+            
         ],
         [
             'text' => 'Support',
@@ -180,7 +189,11 @@ return [
                     'icon' => 'ti ti-article'
                 ]
             ],
+            
         ],
+        
+    
+        
 
     ],
 

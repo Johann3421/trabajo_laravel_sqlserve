@@ -144,10 +144,16 @@
         </div>
 
         <div class="collapse navbar-collapse" id="sidebar-menu">
-            <ul class="navbar-nav pt-lg-3">
-                @each('tablar::partials.navbar.dropdown-item',$tablar->menu('sidebar'), 'item')
-            </ul>
-        </div>
+    <ul class="navbar-nav pt-lg-3">
+        @foreach($tablar->menu('sidebar') as $item)
+            @if(!isset($item['role']) || in_array(Auth::user()->role, (array)$item['role']))
+                @include('tablar::partials.navbar.dropdown-item', ['item' => $item])
+            @endif
+        @endforeach
+    </ul>
+</div>
+
+
     </div>
 </aside>
 

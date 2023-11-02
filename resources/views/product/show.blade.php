@@ -48,20 +48,48 @@
                             <h3 class="card-title">Product Details</h3>
                         </div>
                         <div class="card-body">
-                            
-<div class="form-group">
-<strong>Description:</strong>
-{{ $product->description }}
-</div>
-<div class="form-group">
-<strong>Stock:</strong>
-{{ $product->stock }}
-</div>
-<div class="form-group">
-<strong>Price:</strong>
-{{ $product->price }}
+                            <div class="form-group">
+                                <strong>Name:</strong>
+                                {{ $product->name }}
+                            </div>
+                            <div class="form-group">
+                                <strong>Description:</strong>
+                                {{ $product->description }}
+                            </div>
+                            <div class="form-group">
+                                <strong>Stock:</strong>
+                                {{ $product->stock }}
+                            </div>
+                            <div class="form-group">
+                                <strong>Price:</strong>
+                                {{ $product->price }}
+                            </div>
+                            <div class="form-group">
+                                <strong>Category:</strong>
+                                {{ $product->category }}
+                            </div>
+                            <div class="form-group">
+                                <strong>Provider:</strong>
+                                {{ $product->provider }}
+                            </div>
+                            <div class="form-group">
+    <strong>Image:</strong><br>
+    @if($product->image_path)
+        <img src="{{ asset('/public' . $product->image_path) }}" alt="Product Image">
+    @else
+        <p>No hay imagen disponible</p>
+    @endif
 </div>
 
+
+                            <div class="form-group">
+                                <strong>Created At:</strong>
+                                {{ $product->created_at }}
+                            </div>
+                            <div class="form-group">
+                                <strong>Updated At:</strong>
+                                {{ $product->updated_at }}
+                            </div>
                         </div>
                     </div>
                 </div>
